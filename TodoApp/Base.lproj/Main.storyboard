@@ -58,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Controller-->
         <scene sceneID="0Gj-Co-Gb2">
             <objects>
-                <viewController id="IX7-fi-dcj" sceneMemberID="viewController">
+                <viewController id="IX7-fi-dcj" customClass="AddController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SNv-8r-L6f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,11 +90,19 @@
                                 <rect key="frame" x="137" y="186" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加する"/>
+                                <connections>
+                                    <action selector="todoAddButton:" destination="IX7-fi-dcj" eventType="touchUpInside" id="w7s-Qi-Dgu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NtN-GC-YmI"/>
                     </view>
+                    <connections>
+                        <outlet property="TodoTextField" destination="SfJ-it-xOc" id="TVX-E1-SOd"/>
+                        <outlet property="addButton" destination="uUF-8e-I7c" id="Ohf-J5-TuM"/>
+                        <outlet property="todoTextField" destination="SfJ-it-xOc" id="8zv-Bi-Fc3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRV-jc-pPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
