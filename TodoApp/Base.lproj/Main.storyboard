@@ -100,7 +100,6 @@
                     </view>
                     <connections>
                         <outlet property="TodoTextField" destination="SfJ-it-xOc" id="TVX-E1-SOd"/>
-                        <outlet property="addButton" destination="uUF-8e-I7c" id="Ohf-J5-TuM"/>
                         <outlet property="todoTextField" destination="SfJ-it-xOc" id="8zv-Bi-Fc3"/>
                     </connections>
                 </viewController>

@@ -8,7 +8,6 @@
 import UIKit
 
 class AddController: UIViewController {
-  
   @IBOutlet weak var todoTextField: UITextField!
   var todoList: [String] = []
 
