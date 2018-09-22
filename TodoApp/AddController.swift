@@ -8,23 +8,27 @@
 import UIKit
 
 class AddController: UIViewController {
+  
   @IBOutlet weak var todoTextField: UITextField!
   var todoList: [String] = []
-
+  
   @IBAction func todoAddButton(_ sender: Any) {
     //何も入力されていなければ処理しない
     guard let todoText = todoTextField.text else {
       return
     }
-
-    //何も登録されていなければ変数の最初に値を代入
-    if var todoList = UserDefaults.standard.stringArray(forKey: "todoList") {
-      todoList.append(todoText)
-    } else {
-      todoList[0] = todoText
+    if todoText == "" {
+      return
     }
+    todoTextField.text = ""
+    
+    //何も登録されていなければUDに値を直接代入
+    guard var todoList = UserDefaults.standard.stringArray(forKey: "todoList") else {
+      UserDefaults.standard.set([todoText], forKey: "todoList")
+      return
+    }
+    todoList.append(todoText)
     UserDefaults.standard.set(todoList, forKey: "todoList")
-
   }
 
   override func viewDidLoad() {
