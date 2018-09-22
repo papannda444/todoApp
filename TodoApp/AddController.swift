@@ -23,12 +23,13 @@ class AddController: UIViewController {
     todoTextField.text = ""
     
     //何も登録されていなければUDに値を直接代入
-    guard var todoList = UserDefaults.standard.stringArray(forKey: "todoList") else {
+    if var todoList = UserDefaults.standard.stringArray(forKey: "todoList") {
+      todoList.append(todoText)
+      UserDefaults.standard.set(todoList, forKey: "todoList")
+    } else {
       UserDefaults.standard.set([todoText], forKey: "todoList")
-      return
     }
-    todoList.append(todoText)
-    UserDefaults.standard.set(todoList, forKey: "todoList")
+    
   }
 
   override func viewDidLoad() {
