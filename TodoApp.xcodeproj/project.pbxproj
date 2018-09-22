@@ -14,6 +14,7 @@
 		DCA79C012155F95D00BDF8C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA79BFF2155F95D00BDF8C3 /* LaunchScreen.storyboard */; };
 		DCA79C0C2155F95D00BDF8C3 /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79C0B2155F95D00BDF8C3 /* TodoAppTests.swift */; };
 		DCA79C172155F95D00BDF8C3 /* TodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79C162155F95D00BDF8C3 /* TodoAppUITests.swift */; };
+		DCA79C252156010F00BDF8C3 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79C242156010F00BDF8C3 /* AddController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DCA79C122155F95D00BDF8C3 /* TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA79C162155F95D00BDF8C3 /* TodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITests.swift; sourceTree = "<group>"; };
 		DCA79C182155F95D00BDF8C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCA79C242156010F00BDF8C3 /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				DCA79BF62155F95C00BDF8C3 /* AppDelegate.swift */,
 				DCA79BF82155F95C00BDF8C3 /* ViewController.swift */,
 				DCA79BFA2155F95C00BDF8C3 /* Main.storyboard */,
+				DCA79C242156010F00BDF8C3 /* AddController.swift */,
 				DCA79BFD2155F95D00BDF8C3 /* Assets.xcassets */,
 				DCA79BFF2155F95D00BDF8C3 /* LaunchScreen.storyboard */,
 				DCA79C022155F95D00BDF8C3 /* Info.plist */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA79C252156010F00BDF8C3 /* AddController.swift in Sources */,
 				DCA79BF92155F95C00BDF8C3 /* ViewController.swift in Sources */,
 				DCA79BF72155F95C00BDF8C3 /* AppDelegate.swift in Sources */,
 			);
@@ -441,7 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -459,7 +463,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
