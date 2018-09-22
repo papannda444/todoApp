@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tLe-bB-fRa">
-                                <rect key="frame" x="0.0" y="90" width="375" height="577"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tLe-bB-fRa">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoCell" id="elD-ja-Y0T">
@@ -36,9 +35,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="oK7-zF-mVq"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WA2-HL-cx8">
-                                <rect key="frame" x="0.0" y="46" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WA2-HL-cx8">
+                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="VT5-H7-BMQ"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="メイン画面" id="G98-oB-jTq">
                                         <barButtonItem key="rightBarButtonItem" title="追加" style="done" id="hxr-c8-h55">
@@ -51,6 +52,15 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WA2-HL-cx8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QVw-ul-q3s"/>
+                            <constraint firstItem="tLe-bB-fRa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QYQ-Qe-Tn9"/>
+                            <constraint firstItem="tLe-bB-fRa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TuY-Ql-J6F"/>
+                            <constraint firstItem="tLe-bB-fRa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Xba-Po-NmT"/>
+                            <constraint firstItem="WA2-HL-cx8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jmf-nM-CYf"/>
+                            <constraint firstItem="WA2-HL-cx8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sip-wZ-frP"/>
+                            <constraint firstItem="tLe-bB-fRa" firstAttribute="top" secondItem="WA2-HL-cx8" secondAttribute="bottom" id="w1f-sy-DLG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -66,9 +76,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ci-YJ-kQt">
-                                <rect key="frame" x="0.0" y="46" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ci-YJ-kQt">
+                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YEZ-Aa-3Q1"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="追加画面" id="yzZ-lJ-Sdv">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" style="done" id="saZ-lP-KJL">
@@ -79,16 +91,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfJ-it-xOc">
-                                <rect key="frame" x="16" y="167" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfJ-it-xOc">
+                                <rect key="frame" x="20" y="144" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GUu-jZ-gFA"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUF-8e-I7c">
-                                <rect key="frame" x="137" y="268" width="101" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUF-8e-I7c">
+                                <rect key="frame" x="137" y="234" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1pO-Kj-lA7"/>
+                                </constraints>
                                 <state key="normal" title="追加する"/>
                                 <connections>
                                     <action selector="todoAddButton:" destination="IX7-fi-dcj" eventType="touchUpInside" id="0bG-H4-4nr"/>
@@ -96,6 +112,17 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SfJ-it-xOc" firstAttribute="leading" secondItem="NtN-GC-YmI" secondAttribute="leading" constant="20" id="9RM-l3-L10"/>
+                            <constraint firstItem="NtN-GC-YmI" firstAttribute="trailing" secondItem="uUF-8e-I7c" secondAttribute="trailing" constant="137" id="A55-dc-4MY"/>
+                            <constraint firstItem="uUF-8e-I7c" firstAttribute="leading" secondItem="NtN-GC-YmI" secondAttribute="leading" constant="137" id="FO5-cV-YiP"/>
+                            <constraint firstItem="SfJ-it-xOc" firstAttribute="top" secondItem="4Ci-YJ-kQt" secondAttribute="bottom" constant="60" id="L8N-2A-ORp"/>
+                            <constraint firstItem="uUF-8e-I7c" firstAttribute="top" secondItem="SfJ-it-xOc" secondAttribute="bottom" constant="60" id="LRf-RH-Hwe"/>
+                            <constraint firstItem="4Ci-YJ-kQt" firstAttribute="leading" secondItem="NtN-GC-YmI" secondAttribute="leading" id="TW8-9k-brr"/>
+                            <constraint firstItem="NtN-GC-YmI" firstAttribute="trailing" secondItem="SfJ-it-xOc" secondAttribute="trailing" constant="20" id="VPH-kF-oi0"/>
+                            <constraint firstItem="4Ci-YJ-kQt" firstAttribute="top" secondItem="NtN-GC-YmI" secondAttribute="top" constant="20" id="fpO-UI-m1V"/>
+                            <constraint firstItem="4Ci-YJ-kQt" firstAttribute="trailing" secondItem="NtN-GC-YmI" secondAttribute="trailing" id="nW7-xD-0Kz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NtN-GC-YmI"/>
                     </view>
                     <connections>
