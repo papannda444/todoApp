@@ -235,17 +235,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					DCA79BF22155F95C00BDF8C3 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1220;
 					};
 					DCA79C062155F95D00BDF8C3 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1220;
 						TestTargetID = DCA79BF22155F95C00BDF8C3;
 					};
 					DCA79C112155F95D00BDF8C3 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1220;
 						TestTargetID = DCA79BF22155F95C00BDF8C3;
 					};
 				};
@@ -471,6 +474,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -532,6 +536,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -575,7 +580,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -594,7 +599,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -615,7 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoApp.app/TodoApp";
 			};
@@ -637,7 +642,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoApp.app/TodoApp";
 			};
@@ -658,7 +663,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TodoApp;
 			};
@@ -679,7 +684,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.papannda444.TodoAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TodoApp;
 			};
