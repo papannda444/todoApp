@@ -1,10 +1,3 @@
-//
-//  TodoAppTests.swift
-//  TodoAppTests
-//
-//  Created by 三野田脩 on 2018/09/22.
-//
-
 import XCTest
 @testable import TodoApp
 
