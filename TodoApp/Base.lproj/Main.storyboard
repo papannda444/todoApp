@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,18 +13,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tLe-bB-fRa">
-                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
+                                <rect key="frame" x="0.0" y="64" width="390" height="692"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoCell" id="elD-ja-Y0T">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="elD-ja-Y0T" id="ZoQ-VZ-lWr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -36,7 +35,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WA2-HL-cx8">
-                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="390" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="VT5-H7-BMQ"/>
                                 </constraints>
@@ -51,6 +50,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WA2-HL-cx8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QVw-ul-q3s"/>
@@ -61,7 +61,6 @@
                             <constraint firstItem="WA2-HL-cx8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sip-wZ-frP"/>
                             <constraint firstItem="tLe-bB-fRa" firstAttribute="top" secondItem="WA2-HL-cx8" secondAttribute="bottom" id="w1f-sy-DLG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,11 +72,11 @@
             <objects>
                 <viewController id="IX7-fi-dcj" customClass="AddController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SNv-8r-L6f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ci-YJ-kQt">
-                                <rect key="frame" x="0.0" y="40" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="390" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="YEZ-Aa-3Q1"/>
                                 </constraints>
@@ -92,16 +91,15 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SfJ-it-xOc">
-                                <rect key="frame" x="20" y="144" width="335" height="30"/>
+                                <rect key="frame" x="20" y="124" width="350" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GUu-jZ-gFA"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUF-8e-I7c">
-                                <rect key="frame" x="137" y="234" width="101" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUF-8e-I7c">
+                                <rect key="frame" x="137" y="214" width="116" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1pO-Kj-lA7"/>
                                 </constraints>
@@ -111,6 +109,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="NtN-GC-YmI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SfJ-it-xOc" firstAttribute="leading" secondItem="NtN-GC-YmI" secondAttribute="leading" constant="20" id="9RM-l3-L10"/>
@@ -123,7 +122,6 @@
                             <constraint firstItem="4Ci-YJ-kQt" firstAttribute="top" secondItem="NtN-GC-YmI" secondAttribute="top" constant="20" id="fpO-UI-m1V"/>
                             <constraint firstItem="4Ci-YJ-kQt" firstAttribute="trailing" secondItem="NtN-GC-YmI" secondAttribute="trailing" id="nW7-xD-0Kz"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="NtN-GC-YmI"/>
                     </view>
                     <connections>
                         <outlet property="TodoTextField" destination="SfJ-it-xOc" id="TVX-E1-SOd"/>
