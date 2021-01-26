@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kaT-lP-cJx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add View Controller-->
+        <scene sceneID="Hbe-Tv-QDH">
+            <objects>
+                <viewController id="kaT-lP-cJx" customClass="AddViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GRl-hX-dVu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xq7-Y0-H6r">
+                                <rect key="frame" x="365" y="16" width="33" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="完了"/>
+                                <connections>
+                                    <action selector="complete:" destination="kaT-lP-cJx" eventType="touchUpInside" id="u71-Wh-6je"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規追加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5m-Sp-jBW">
+                                <rect key="frame" x="174" y="22" width="66" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsP-9l-FKw">
+                                <rect key="frame" x="16" y="16" width="82" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="キャンセル"/>
+                                <connections>
+                                    <action selector="cancel:" destination="kaT-lP-cJx" eventType="touchUpInside" id="gD4-TJ-eeC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="puS-39-Mj0">
+                                <rect key="frame" x="16" y="176" width="382" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Um4-EH-AxG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="puS-39-Mj0" firstAttribute="top" secondItem="RsP-9l-FKw" secondAttribute="bottom" constant="128" id="CSY-a7-d4S"/>
+                            <constraint firstItem="D5m-Sp-jBW" firstAttribute="centerX" secondItem="GRl-hX-dVu" secondAttribute="centerX" id="Ts0-LW-uCg"/>
+                            <constraint firstItem="D5m-Sp-jBW" firstAttribute="centerY" secondItem="RsP-9l-FKw" secondAttribute="centerY" id="UaV-Ax-Ccq"/>
+                            <constraint firstItem="Xq7-Y0-H6r" firstAttribute="centerY" secondItem="RsP-9l-FKw" secondAttribute="centerY" id="V62-TO-B6Z"/>
+                            <constraint firstItem="Um4-EH-AxG" firstAttribute="trailing" secondItem="puS-39-Mj0" secondAttribute="trailing" constant="16" id="br4-Lo-Yzo"/>
+                            <constraint firstItem="Um4-EH-AxG" firstAttribute="trailing" secondItem="Xq7-Y0-H6r" secondAttribute="trailing" constant="16" id="bun-TN-Gws"/>
+                            <constraint firstItem="RsP-9l-FKw" firstAttribute="top" secondItem="Um4-EH-AxG" secondAttribute="top" constant="16" id="nVQ-Bv-njR"/>
+                            <constraint firstItem="puS-39-Mj0" firstAttribute="leading" secondItem="Um4-EH-AxG" secondAttribute="leading" constant="16" id="oqL-c5-z7c"/>
+                            <constraint firstItem="RsP-9l-FKw" firstAttribute="leading" secondItem="Um4-EH-AxG" secondAttribute="leading" constant="16" id="u6A-xL-yfv"/>
+                        </constraints>
+                    </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="todoTextField" destination="puS-39-Mj0" id="74a-MB-3Qk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRz-FQ-aMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

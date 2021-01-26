@@ -1,6 +1,14 @@
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBAction private func add(_ sender: UIBarButtonItem) {
+        let addViewController = UIStoryboard(name: "AddViewController",
+                                             bundle: nil)
+            .instantiateInitialViewController() as! AddViewController
+
+        present(addViewController, animated: true)
+    }
+
     // リストの行数決め
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let todoList = UserDefaults.standard.array(forKey: "todoList") {
