@@ -10,14 +10,15 @@
 		01972D1C055C4547BE69E562 /* Pods_TodoApp_TodoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0967524B283C357221E98B32 /* Pods_TodoApp_TodoAppUITests.framework */; };
 		5BF80EAE1401E1D8CC709F19 /* Pods_TodoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92017892DD91DF692984669 /* Pods_TodoApp.framework */; };
 		91FCB48ADCDB5EAEC2CE1BE1 /* Pods_TodoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E674081DCAFC8F0421AC728 /* Pods_TodoAppTests.framework */; };
+		DC228B6F25C00A24002BF07A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC228B6E25C00A24002BF07A /* AddViewController.swift */; };
+		DC228B7725C00A60002BF07A /* AddViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC228B7625C00A60002BF07A /* AddViewController.storyboard */; };
 		DCA79BF72155F95C00BDF8C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79BF62155F95C00BDF8C3 /* AppDelegate.swift */; };
-		DCA79BF92155F95C00BDF8C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79BF82155F95C00BDF8C3 /* ViewController.swift */; };
-		DCA79BFC2155F95C00BDF8C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA79BFA2155F95C00BDF8C3 /* Main.storyboard */; };
+		DCA79BF92155F95C00BDF8C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79BF82155F95C00BDF8C3 /* MainViewController.swift */; };
+		DCA79BFC2155F95C00BDF8C3 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA79BFA2155F95C00BDF8C3 /* MainViewController.storyboard */; };
 		DCA79BFE2155F95D00BDF8C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA79BFD2155F95D00BDF8C3 /* Assets.xcassets */; };
 		DCA79C012155F95D00BDF8C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA79BFF2155F95D00BDF8C3 /* LaunchScreen.storyboard */; };
 		DCA79C0C2155F95D00BDF8C3 /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79C0B2155F95D00BDF8C3 /* TodoAppTests.swift */; };
 		DCA79C172155F95D00BDF8C3 /* TodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79C162155F95D00BDF8C3 /* TodoAppUITests.swift */; };
-		DCA79C252156010F00BDF8C3 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA79C242156010F00BDF8C3 /* AddController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +46,12 @@
 		964C24F587838DE1637D5091 /* Pods-TodoApp-TodoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApp-TodoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TodoApp-TodoAppUITests/Pods-TodoApp-TodoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E674081DCAFC8F0421AC728 /* Pods_TodoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E07517579202A9A38C4B33 /* Pods-TodoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TodoAppTests/Pods-TodoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC228B6E25C00A24002BF07A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DC228B7625C00A60002BF07A /* AddViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddViewController.storyboard; sourceTree = "<group>"; };
 		DCA79BF32155F95C00BDF8C3 /* TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA79BF62155F95C00BDF8C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCA79BF82155F95C00BDF8C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCA79BFB2155F95C00BDF8C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCA79BF82155F95C00BDF8C3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DCA79BFB2155F95C00BDF8C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
 		DCA79BFD2155F95D00BDF8C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCA79C002155F95D00BDF8C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCA79C022155F95D00BDF8C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		DCA79C122155F95D00BDF8C3 /* TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA79C162155F95D00BDF8C3 /* TodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITests.swift; sourceTree = "<group>"; };
 		DCA79C182155F95D00BDF8C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCA79C242156010F00BDF8C3 /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 		E92017892DD91DF692984669 /* Pods_TodoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFF9E9A27D9938ACBC25647 /* Pods-TodoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoApp.release.xcconfig"; path = "Target Support Files/Pods-TodoApp/Pods-TodoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,9 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				DCA79BF62155F95C00BDF8C3 /* AppDelegate.swift */,
-				DCA79BF82155F95C00BDF8C3 /* ViewController.swift */,
-				DCA79BFA2155F95C00BDF8C3 /* Main.storyboard */,
-				DCA79C242156010F00BDF8C3 /* AddController.swift */,
+				DCA79BF82155F95C00BDF8C3 /* MainViewController.swift */,
+				DCA79BFA2155F95C00BDF8C3 /* MainViewController.storyboard */,
+				DC228B6E25C00A24002BF07A /* AddViewController.swift */,
+				DC228B7625C00A60002BF07A /* AddViewController.storyboard */,
 				DCA79BFD2155F95D00BDF8C3 /* Assets.xcassets */,
 				DCA79BFF2155F95D00BDF8C3 /* LaunchScreen.storyboard */,
 				DCA79C022155F95D00BDF8C3 /* Info.plist */,
@@ -280,7 +283,8 @@
 			files = (
 				DCA79C012155F95D00BDF8C3 /* LaunchScreen.storyboard in Resources */,
 				DCA79BFE2155F95D00BDF8C3 /* Assets.xcassets in Resources */,
-				DCA79BFC2155F95C00BDF8C3 /* Main.storyboard in Resources */,
+				DCA79BFC2155F95C00BDF8C3 /* MainViewController.storyboard in Resources */,
+				DC228B7725C00A60002BF07A /* AddViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,8 +395,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA79C252156010F00BDF8C3 /* AddController.swift in Sources */,
-				DCA79BF92155F95C00BDF8C3 /* ViewController.swift in Sources */,
+				DCA79BF92155F95C00BDF8C3 /* MainViewController.swift in Sources */,
+				DC228B6F25C00A24002BF07A /* AddViewController.swift in Sources */,
 				DCA79BF72155F95C00BDF8C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,12 +433,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DCA79BFA2155F95C00BDF8C3 /* Main.storyboard */ = {
+		DCA79BFA2155F95C00BDF8C3 /* MainViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DCA79BFB2155F95C00BDF8C3 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		DCA79BFF2155F95D00BDF8C3 /* LaunchScreen.storyboard */ = {

@@ -1,10 +1,20 @@
 import UIKit
 
-class AddController: UIViewController {
+protocol AddViewControllerDelegate: AnyObject {
+    func addView(_ addView: AddViewController, appendingTodo todo: String)
+}
+
+class AddViewController: UIViewController {
     @IBOutlet private var todoTextField: UITextField!
+
+    weak var delegate: AddViewControllerDelegate?
     var todoList: [String] = []
 
-    @IBAction private func todoAddButton(_ sender: Any) {
+    @IBAction private func cancel(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+
+    @IBAction private func complete(_ sender: Any) {
         // 何も入力されていなければ処理しない
         guard let todoText = todoTextField.text else {
             return
@@ -21,5 +31,8 @@ class AddController: UIViewController {
         } else {
             UserDefaults.standard.set([todoText], forKey: "todoList")
         }
+
+        delegate?.addView(self, appendingTodo: todoText)
+        dismiss(animated: true)
     }
 }
