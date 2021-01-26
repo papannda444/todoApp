@@ -1,11 +1,13 @@
 import UIKit
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet private var tableView: UITableView!
+
     @IBAction private func add(_ sender: UIBarButtonItem) {
         let addViewController = UIStoryboard(name: "AddViewController",
                                              bundle: nil)
             .instantiateInitialViewController() as! AddViewController
-
+        addViewController.delegate = self
         present(addViewController, animated: true)
     }
 
@@ -38,5 +40,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             UserDefaults.standard.set(todoList, forKey: "todoList")
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+}
+
+extension MainViewController: AddViewControllerDelegate {
+    func addView(_ addView: AddViewController, appendingTodo todo: String) {
+        tableView.reloadData()
     }
 }

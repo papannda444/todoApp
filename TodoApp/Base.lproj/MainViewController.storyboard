@@ -60,6 +60,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="メイン画面" id="i4u-qb-VHw"/>
+                    <connections>
+                        <outlet property="tableView" destination="tpq-r4-Y5z" id="6Xj-My-kPe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53H-BH-53D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,8 +1,13 @@
 import UIKit
 
+protocol AddViewControllerDelegate: AnyObject {
+    func addView(_ addView: AddViewController, appendingTodo todo: String)
+}
+
 class AddViewController: UIViewController {
     @IBOutlet private var todoTextField: UITextField!
 
+    weak var delegate: AddViewControllerDelegate?
     var todoList: [String] = []
 
     @IBAction private func cancel(_ sender: UIButton) {
@@ -26,6 +31,8 @@ class AddViewController: UIViewController {
         } else {
             UserDefaults.standard.set([todoText], forKey: "todoList")
         }
+
+        delegate?.addView(self, appendingTodo: todoText)
         dismiss(animated: true)
     }
 }
