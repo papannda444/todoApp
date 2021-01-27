@@ -26,11 +26,11 @@ class TodoAddViewController: UIViewController {
         todoTextField.text = ""
 
         // 何も登録されていなければUDに値を直接代入
-        if var todoList = UserDefaults.standard.stringArray(forKey: "todoList") {
+        if var todoList = UserDefaults.standard.stringArray(forKey: "todos") {
             todoList.append(todoText)
-            UserDefaults.standard.set(todoList, forKey: "todoList")
+            UserDefaults.standard.set(todoList, forKey: "todos")
         } else {
-            UserDefaults.standard.set([todoText], forKey: "todoList")
+            UserDefaults.standard.set([todoText], forKey: "todos")
         }
 
         delegate?.addViewController(self, appendingTodo: todoText)
