@@ -1,7 +1,8 @@
 import UIKit
 
 protocol AddViewControllerDelegate: AnyObject {
-    func addView(_ addView: AddViewController, appendingTodo todo: String)
+    func addViewController(_ addView: AddViewController, appendingTodo todo: String)
+    func addViewControllerCancelButtonClicked(_ addView: AddViewController)
 }
 
 class AddViewController: UIViewController {
@@ -11,7 +12,7 @@ class AddViewController: UIViewController {
     var todoList: [String] = []
 
     @IBAction private func cancel(_ sender: UIButton) {
-        dismiss(animated: true)
+        delegate?.addViewControllerCancelButtonClicked(self)
     }
 
     @IBAction private func complete(_ sender: Any) {
@@ -32,7 +33,6 @@ class AddViewController: UIViewController {
             UserDefaults.standard.set([todoText], forKey: "todoList")
         }
 
-        delegate?.addView(self, appendingTodo: todoText)
-        dismiss(animated: true)
+        delegate?.addViewController(self, appendingTodo: todoText)
     }
 }

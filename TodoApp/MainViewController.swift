@@ -4,9 +4,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet private var tableView: UITableView!
 
     @IBAction private func add(_ sender: UIBarButtonItem) {
-        let addViewController = UIStoryboard(name: "AddViewController",
-                                             bundle: nil)
-            .instantiateInitialViewController() as! AddViewController
+        guard let addViewController = UIStoryboard(name: "AddViewController",
+                                                   bundle: nil)
+                .instantiateInitialViewController() as? AddViewController else {
+            return
+        }
         addViewController.delegate = self
         present(addViewController, animated: true)
     }
@@ -44,7 +46,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
 
 extension MainViewController: AddViewControllerDelegate {
-    func addView(_ addView: AddViewController, appendingTodo todo: String) {
+    func addViewController(_ addView: AddViewController, appendingTodo todo: String) {
+        dismiss(animated: true)
         tableView.reloadData()
+    }
+
+    func addViewControllerCancelButtonClicked(_ addView: AddViewController) {
+        dismiss(animated: true)
     }
 }
