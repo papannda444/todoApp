@@ -1,12 +1,12 @@
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TodoListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet private var tableView: UITableView!
 
     @IBAction private func add(_ sender: UIBarButtonItem) {
         guard let addViewController = UIStoryboard(name: "AddViewController",
                                                    bundle: nil)
-                .instantiateInitialViewController() as? AddViewController else {
+                .instantiateInitialViewController() as? TodoAddViewController else {
             return
         }
         addViewController.delegate = self
@@ -45,13 +45,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 }
 
-extension MainViewController: AddViewControllerDelegate {
-    func addViewController(_ addView: AddViewController, appendingTodo todo: String) {
+extension TodoListViewController: TodoAddViewControllerDelegate {
+    func addViewController(_ addView: TodoAddViewController, appendingTodo todo: String) {
         dismiss(animated: true)
         tableView.reloadData()
     }
 
-    func addViewControllerCancelButtonClicked(_ addView: AddViewController) {
+    func addViewControllerCancelButtonClicked(_ addView: TodoAddViewController) {
         dismiss(animated: true)
     }
 }

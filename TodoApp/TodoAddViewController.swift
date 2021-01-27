@@ -1,14 +1,14 @@
 import UIKit
 
-protocol AddViewControllerDelegate: AnyObject {
-    func addViewController(_ addView: AddViewController, appendingTodo todo: String)
-    func addViewControllerCancelButtonClicked(_ addView: AddViewController)
+protocol TodoAddViewControllerDelegate: AnyObject {
+    func addViewController(_ addView: TodoAddViewController, appendingTodo todo: String)
+    func addViewControllerCancelButtonClicked(_ addView: TodoAddViewController)
 }
 
-class AddViewController: UIViewController {
+class TodoAddViewController: UIViewController {
     @IBOutlet private var todoTextField: UITextField!
 
-    weak var delegate: AddViewControllerDelegate?
+    weak var delegate: TodoAddViewControllerDelegate?
     var todoList: [String] = []
 
     @IBAction private func cancel(_ sender: UIButton) {
