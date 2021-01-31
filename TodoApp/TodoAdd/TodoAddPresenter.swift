@@ -8,13 +8,21 @@
 import Foundation
 
 protocol TodoAddPresenterInput {
+    func didTapCancelButton()
     func didTapCompleteButton(appendingTodo todo: String)
 }
 
 protocol TodoAddPresenterOutput: AnyObject {}
 
+// モーダル表示をしているVC(Presenter)に状態を通知する
+protocol TodoAddDelegate: AnyObject {
+    func todoAddDidCancel()
+    func todoAddDidComplete(appendingTodo todo: String)
+}
+
 final class TodoAddPresenter {
     private weak var view: TodoAddPresenterOutput!
+    weak var delegate: TodoAddDelegate?
 
     init(view: TodoAddPresenterOutput) {
         self.view = view
@@ -22,9 +30,15 @@ final class TodoAddPresenter {
 }
 
 extension TodoAddPresenter: TodoAddPresenterInput {
+    func didTapCancelButton() {
+        delegate?.todoAddDidCancel()
+    }
+
     func didTapCompleteButton(appendingTodo todo: String) {
         var todoList = UserDefaults.standard.stringArray(forKey: "todos") ?? []
         todoList.append(todo)
         UserDefaults.standard.setValue(todoList, forKey: "todos")
+
+        delegate?.todoAddDidComplete(appendingTodo: todo)
     }
 }

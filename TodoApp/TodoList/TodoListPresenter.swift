@@ -11,9 +11,13 @@ protocol TodoListPresenterInput {
     var numberOfTodos: Int { get }
     func todos(forRow row: Int) -> String?
     func deleteTodos(forRow row: Int)
+    func didTapAddButton()
 }
 
 protocol TodoListPresenterOutput: AnyObject {
+    func todoAddDidEndAppending()
+    func updateTodos(appendingTodo todo: String)
+    func transitionToTodoAdd<T: TodoAddDelegate>(_ delegate: T?)
 }
 
 final class TodoListPresenter {
@@ -46,5 +50,20 @@ extension TodoListPresenter: TodoListPresenterInput {
     func deleteTodos(forRow row: Int) {
         guard row < todos.count else { return }
         todos.remove(at: row)
+    }
+
+    func didTapAddButton() {
+        view.transitionToTodoAdd(self)
+    }
+}
+
+extension TodoListPresenter: TodoAddDelegate {
+    func todoAddDidCancel() {
+        view.todoAddDidEndAppending()
+    }
+
+    func todoAddDidComplete(appendingTodo todo: String) {
+        view.todoAddDidEndAppending()
+        view.updateTodos(appendingTodo: todo)
     }
 }

@@ -16,16 +16,7 @@ final class TodoListViewController: UIViewController {
     }
 
     @IBAction private func add(_ sender: UIBarButtonItem) {
-        guard let addViewController = UIStoryboard(name: "TodoAddViewController",
-                                                   bundle: nil)
-                .instantiateInitialViewController() as? TodoAddViewController else {
-            return
-        }
-        let addPresenter = TodoAddPresenter(view: addViewController)
-
-        addViewController.delegate = self
-        addViewController.inject(presenter: addPresenter)
-        present(addViewController, animated: true)
+        presenter.didTapAddButton()
     }
 }
 
@@ -53,16 +44,25 @@ extension TodoListViewController: UITableViewDelegate {
     }
 }
 
-extension TodoListViewController: TodoAddViewControllerDelegate {
-    func addViewController(_ addView: TodoAddViewController, appendingTodo todo: String) {
+extension TodoListViewController: TodoListPresenterOutput {
+    func todoAddDidEndAppending() {
         dismiss(animated: true)
+    }
+
+    func updateTodos(appendingTodo todo: String) {
         tableView.reloadData()
     }
 
-    func addViewControllerCancelButtonClicked(_ addView: TodoAddViewController) {
-        dismiss(animated: true)
-    }
-}
+    func transitionToTodoAdd<T: TodoAddDelegate>(_ delegate: T?) {
+        guard let addViewController = UIStoryboard(name: "TodoAddViewController",
+                                                   bundle: nil)
+                .instantiateInitialViewController() as? TodoAddViewController else {
+            return
+        }
 
-extension TodoListViewController: TodoListPresenterOutput {
+        let addPresenter = TodoAddPresenter(view: addViewController)
+        addPresenter.delegate = delegate
+        addViewController.inject(presenter: addPresenter)
+        present(addViewController, animated: true)
+    }
 }
