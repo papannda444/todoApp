@@ -1,3 +1,10 @@
+//
+//  TodoAddPresenter.swift
+//  TodoApp
+//
+//  Created by papannda444 on 2021/01/31.
+//
+
 import UIKit
 
 @UIApplicationMain
@@ -6,10 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let mainViewController = UIStoryboard(name: "MainViewController",
-                                              bundle: nil)
-            .instantiateInitialViewController()!
-        let navigationController = UINavigationController(rootViewController: mainViewController)
+        let todoListViewController = UIStoryboard(name: "TodoListViewController",
+                                                  bundle: nil)
+            .instantiateInitialViewController() as! TodoListViewController
+        let navigationController = UINavigationController(rootViewController: todoListViewController)
+
+        let presenter = TodoListPresenter(view: todoListViewController)
+        todoListViewController.inject(presenter: presenter)
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
