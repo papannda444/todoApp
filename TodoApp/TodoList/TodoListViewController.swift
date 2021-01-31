@@ -1,3 +1,10 @@
+//
+//  TodoAddPresenter.swift
+//  TodoApp
+//
+//  Created by papannda444 on 2021/01/31.
+//
+
 import UIKit
 
 final class TodoListViewController: UIViewController {
@@ -14,7 +21,10 @@ final class TodoListViewController: UIViewController {
                 .instantiateInitialViewController() as? TodoAddViewController else {
             return
         }
+        let addPresenter = TodoAddPresenter(view: addViewController)
+
         addViewController.delegate = self
+        addViewController.inject(presenter: addPresenter)
         present(addViewController, animated: true)
     }
 }
