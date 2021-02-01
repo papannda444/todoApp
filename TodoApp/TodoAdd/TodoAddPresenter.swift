@@ -35,6 +35,8 @@ extension TodoAddPresenter: TodoAddPresenterInput {
     }
 
     func didTapCompleteButton(appendingTodo todo: String) {
+        guard !todo.trimmingCharacters(in: .whitespaces).isEmpty else { return }
+
         var todoList = UserDefaults.standard.stringArray(forKey: "todos") ?? []
         todoList.append(todo)
         UserDefaults.standard.setValue(todoList, forKey: "todos")
