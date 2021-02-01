@@ -10,9 +10,12 @@ import Foundation
 protocol TodoAddPresenterInput {
     func didTapCancelButton()
     func didTapCompleteButton(appendingTodo todo: String)
+    func didEditTextField(withText text: String?)
 }
 
-protocol TodoAddPresenterOutput: AnyObject {}
+protocol TodoAddPresenterOutput: AnyObject {
+    func enableCompleteButton(_ isEnabled: Bool)
+}
 
 // モーダル表示をしているVC(Presenter)に状態を通知する
 protocol TodoAddDelegate: AnyObject {
@@ -35,10 +38,20 @@ extension TodoAddPresenter: TodoAddPresenterInput {
     }
 
     func didTapCompleteButton(appendingTodo todo: String) {
+        guard !todo.trimmingCharacters(in: .whitespaces).isEmpty else { return }
+
         var todoList = UserDefaults.standard.stringArray(forKey: "todos") ?? []
         todoList.append(todo)
         UserDefaults.standard.setValue(todoList, forKey: "todos")
 
         delegate?.todoAddDidComplete(appendingTodo: todo)
+    }
+
+    func didEditTextField(withText text: String?) {
+        if let text = text, text.trimmingCharacters(in: .whitespaces).isEmpty {
+            view.enableCompleteButton(false)
+        } else {
+            view.enableCompleteButton(true)
+        }
     }
 }

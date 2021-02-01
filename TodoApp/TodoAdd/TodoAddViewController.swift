@@ -9,6 +9,7 @@ import UIKit
 
 class TodoAddViewController: UIViewController {
     @IBOutlet private var todoTextField: UITextField!
+    @IBOutlet private var completeButton: UIButton!
 
     private var presenter: TodoAddPresenterInput!
 
@@ -25,6 +26,21 @@ class TodoAddViewController: UIViewController {
 
         presenter.didTapCompleteButton(appendingTodo: todo)
     }
+
+    @IBAction private func edit(_ sender: UITextField) {
+        presenter.didEditTextField(withText: sender.text)
+    }
 }
 
-extension TodoAddViewController: TodoAddPresenterOutput {}
+extension TodoAddViewController: TodoAddPresenterOutput {
+    func enableCompleteButton(_ isEnabled: Bool) {
+        completeButton.isEnabled = isEnabled
+    }
+}
+
+extension TodoAddViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
